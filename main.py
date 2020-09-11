@@ -1,7 +1,9 @@
 import pyautogui
 import os
-import subprocess
-import sys
+
+
+# import subprocess
+# import sys
 
 
 def open_application():
@@ -9,6 +11,6 @@ def open_application():
 
 
 def click_on_button(image_path):
-    connect_position = pyautogui.locateCenterOnScreen('start.png')
+    connect_position = pyautogui.locateCenterOnScreen(image_path)
     pyautogui.moveTo(connect_position)
     pyautogui.click()
