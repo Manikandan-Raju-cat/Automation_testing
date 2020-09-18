@@ -10,6 +10,7 @@ connect = r'connect.png'                                                        
 ok = r'ok.png'
 check = r'check_box.png'
 ECM_select = r'HVAC_ECM.png'
+log = r'log_code.png'
 delay = 5
 
 
@@ -37,8 +38,8 @@ def take_screenshot(position):
 
 '''
 if __name__ == "__main__":
-'''
-open_application(ET_path)
+
+open_alication(ET_path)
 time.sleep(2.5*delay)
 connect_position = click_on_button(connect)
 print("connect_clicked")
@@ -52,8 +53,11 @@ time.sleep(2*delay)
 code_pos = click_on_button(Active_codes)
 print("code_clicked")
 time.sleep(2*delay)
-code_pos = click_on_button(check)
+
+code_pos = click_on_button(log)
 print(type(code_pos))
 print("check_clicked")
-time.sleep(5*delay)
+'''
+os.remove(r"C:\Projects\UAT\AD63\Test_results\images\result.png")
+
 
